@@ -17,6 +17,9 @@ def input_error(func):
 
 def parse_input(user_input):
     parts = user_input.strip().split()
+
+    if not parts:
+        return "", []
     command = parts[0].lower()
     args = parts[1:]
     return command, args
